@@ -1,0 +1,14 @@
+# File rahasia (API Key & Password)
+.env
+
+# Folder cache Python
+__pycache__/
+*.py[cod]
+
+# Virtual Environment (jika ada)
+.venv/
+venv/
+env/
+
+# File export temporary
+*.xlsx

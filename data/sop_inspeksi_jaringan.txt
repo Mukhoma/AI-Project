@@ -1,0 +1,67 @@
+Standar Operasional Prosedur (SOP) Inspeksi Perangkat Jaringan Telkom
+
+=== ATURAN UMUM INSPEKSI ===
+1. Setiap laporan inspeksi lapangan wajib mencatat waktu pelaksanaan (tanggal dan jam) secara spesifik.
+2. Lokasi inspeksi harus menyertakan alamat fisik dan titik koordinat geografis (Latitude dan Longitude).
+3. Jumlah perangkat utama yang diinspeksi harus dihitung dan dicatat dalam bentuk angka bulat (integer). Jika tidak disebutkan, asumsikan jumlahnya adalah 1.
+4. Catatan tambahan harus merangkum kondisi fisik perangkat, kelengkapan komponen, dan status instalasi kabel.
+
+=== SOP INSPEKSI MODEM ===
+Kategori: Modem
+Perangkat yang termasuk kategori modem: ONT (Optical Network Terminal), ONU, modem fiber optik, modem GPON, modem wifi.id, Huawei HG8245H, ZTE F609, dan perangkat CPE (Customer Premises Equipment) sejenis.
+Prosedur inspeksi modem:
+- Periksa indikator lampu (Power, LOS, PON, LAN, WLAN). Jika lampu LOS menyala merah, catat sebagai gangguan koneksi fiber optik.
+- Periksa kondisi kabel fiber optik dari ODP ke modem, pastikan tidak ada tekukan tajam atau patah.
+- Pastikan konektor SC/UPC atau SC/APC terpasang dengan benar dan bersih.
+- Catat serial number dan MAC address perangkat modem.
+- Pastikan firmware modem dalam versi terbaru sesuai standar Telkom.
+- Periksa konfigurasi SSID dan keamanan WiFi (minimal WPA2).
+
+=== SOP INSPEKSI ROUTER ===
+Kategori: Router
+Perangkat yang termasuk kategori router: router distribusi, router core, router gateway, Cisco ISR, MikroTik, router enterprise, dan perangkat routing sejenis.
+Prosedur inspeksi router:
+- Periksa status interface (up/down) pada setiap port yang digunakan.
+- Verifikasi tabel routing dan pastikan tidak ada rute yang hilang atau salah konfigurasi.
+- Periksa penggunaan CPU dan memori router, catat jika melebihi 80% kapasitas.
+- Pastikan protokol routing (OSPF, BGP, atau static route) berjalan sesuai konfigurasi standar.
+- Periksa log sistem untuk error atau warning yang berulang.
+- Catat versi firmware/IOS dan bandingkan dengan versi standar yang direkomendasikan.
+- Pastikan kabel uplink dan downlink terpasang dengan benar dan tidak ada kerusakan fisik.
+
+=== SOP INSPEKSI ACCESS POINT ===
+Kategori: Access Point
+Perangkat yang termasuk kategori access point: AP indoor, AP outdoor, wifi.id AP, UniFi AP, access point hotspot publik, dan perangkat wireless access point sejenis.
+Prosedur inspeksi access point:
+- Periksa posisi pemasangan AP (ketinggian, sudut, orientasi antena) sesuai standar coverage area.
+- Pastikan jumlah antena sesuai spesifikasi (MIMO 2x2, 3x3, atau 4x4).
+- Periksa kekuatan sinyal (RSSI) di beberapa titik dalam area jangkauan, minimal -65 dBm untuk layanan indoor.
+- Verifikasi konfigurasi SSID, VLAN, dan metode autentikasi (WPA2-Enterprise atau Captive Portal untuk wifi.id).
+- Periksa kabel PoE (Power over Ethernet) dan pastikan injector atau switch PoE berfungsi normal.
+- Catat jumlah pengguna aktif dan bandwidth yang terpakai pada saat inspeksi.
+- Periksa kondisi fisik housing/casing AP, terutama untuk AP outdoor (tidak bocor, tidak berkarat).
+
+=== SOP INSPEKSI SWITCH ===
+Kategori: Switch
+Perangkat yang termasuk kategori switch: switch layer 2, switch layer 3, managed switch, unmanaged switch, Cisco Catalyst, switch distribusi, switch akses, dan perangkat switching sejenis.
+Prosedur inspeksi switch:
+- Periksa status lampu indikator setiap port (link/activity).
+- Verifikasi konfigurasi VLAN dan pastikan sesuai dengan skema jaringan yang berlaku.
+- Periksa log STP (Spanning Tree Protocol) untuk mendeteksi loop jaringan.
+- Pastikan port trunk dan port access dikonfigurasi dengan benar.
+- Periksa suhu operasional switch dan pastikan sirkulasi udara di rak server/lemari jaringan memadai.
+- Catat utilisasi bandwidth pada port uplink, warning jika melebihi 70% kapasitas.
+- Verifikasi keamanan port (port security, MAC address filtering) sudah diaktifkan pada port akses.
+- Pastikan label kabel pada setiap port sesuai dengan dokumentasi jaringan.
+
+=== SOP INSPEKSI ODP DAN ODC ===
+Kategori: ODP/ODC
+Perangkat yang termasuk kategori ODP/ODC: Optical Distribution Point (ODP), Optical Distribution Cabinet (ODC), splitter, patch panel fiber, dan perangkat distribusi fiber optik sejenis.
+Prosedur inspeksi ODP/ODC:
+- Periksa kondisi fisik box ODP/ODC (engsel pintu, kunci, seal kedap air).
+- Pastikan semua kabel fiber optik tersusun rapi di dalam tray splice.
+- Periksa kondisi splitter (1:8, 1:16, atau 1:32) dan pastikan tidak ada port yang rusak.
+- Catat jumlah port yang terpakai dan tersisa pada ODP.
+- Periksa redaman optik (optical loss) menggunakan OPM (Optical Power Meter), standar maksimal -25 dBm di sisi pelanggan.
+- Pastikan label pelanggan terpasang pada setiap pigtail yang digunakan.
+- Periksa grounding dan pastikan kabel grounding terpasang dengan baik.
